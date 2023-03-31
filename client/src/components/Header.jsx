@@ -5,9 +5,9 @@
 const Header = () => {
 
     return (
-        <header>
-            <h1>TodoList</h1>
-        </header>
+        <div style={{marginTop:"15%", textAlign:"center"}}>
+            <h1  className="text-3xl font-bold underline">TodoList</h1>
+        </div>
     )
 }
 

@@ -5,8 +5,6 @@ import { ALL_TODOS, DONE_TODOS, ACTIVE_TODOS } from '../redux/actions/type';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import '../App.css';
-
 // component
 import Todo from './Todo';
 import Tabs from './Tabs';
@@ -56,7 +54,7 @@ console.log("todos", todos);
       console.log(todos);
     return (
         <article>
-            <div>
+            <div  style={{marginTop:"2%"}}>
                 <Tabs currentTab={currentTab} />
 
                 {
@@ -73,13 +71,13 @@ console.log("todos", todos);
          <DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable  droppableId='characters'>
             {(provided) => (
-              <ul className="characters" {...provided.droppableProps} ref={provided.innerRef}>
+              <ul className="divide-y divide-gray-200" {...provided.droppableProps} ref={provided.innerRef}>
                 
                  {
                     getTodos().map((todo, index) => (
                         <Draggable key={todo._id} draggableId={todo._id} index={index}>
                         {(provided) => (
-                          <li ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
+                          <li className="py-4 flex" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                   
                          <Todo 
                             key={todo._id}

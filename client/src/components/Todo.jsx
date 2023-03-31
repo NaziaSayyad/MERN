@@ -21,7 +21,7 @@ const Todo = ({ todo }) => {
     }
 
     return (
-        <li
+        <li 
             className="task"
             onClick={() => dispatch(toggleTodo(todo._id))}
             style={{
